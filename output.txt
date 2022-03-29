@@ -1,0 +1,97 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+
+using namespace std;
+
+/*
+int main(){
+	fstream f;
+	f.open("input.txt", ios::in); //mo file bang f.open
+	
+	string data;
+	getline(f, data); // doc giu lieu tu file ( 1 dong )
+	
+	f.close(); //dong file
+	
+	cout << data;
+}
+
+*/
+
+/*
+int main(){
+	fstream f;
+	f.open("input.txt", ios::in);
+	
+	string data;
+	string line;
+	while(!f.eof()) // kiem tra file ket thuc chua : end of f
+	{
+		getline(f, line);
+		data += line;
+	}
+	f.close();
+	
+	cout << data;
+}
+*/
+class NhapSach{
+private:
+	string tensach;
+	string tacgia;
+	string theloai;
+	int soluong;
+public:
+	
+	NhapSach(){
+	}
+	NhapCacSach(){
+		cout << "Nhap ten sach: ";
+		cin >> this->tensach;
+		cout << "\nNhap tac gia: ";
+		cin >> this->tacgia;
+		cout << "\nNhap the loai: ";
+		cin >> this->theloai;
+		cout << "\nNhap so luong: ";
+		cin >> this->soluong;
+	}
+	InCacSachVuaNhap(){
+		//fstream FileInSachNhap;
+		//FileInSachNhap.open("FileInSachNhap.txt", ios::out|ios::app);
+//		for(int i = 0; i < n - 1; i++)
+		cout << this->tensach << "\t" << this->tacgia << "\t" << this->theloai << "\t" << this->soluong;
+	}
+	InTongCacSach(){
+		
+	}
+};
+
+int main(){
+	while(true){
+		cout << ("==PHAN MEM QUAN LY NHA SACH==");
+		cout << ("==************MENU*********==");
+		cout << ("==1. NHAP SACH             ==\n");
+		
+		printf("Nhap tuy chon: ");
+		scanf("%d", &key);
+		switch(key){
+			case 1:
+		NhapSach a[100];
+		int sltensach = 0;
+		cout << "Nhap so luong ten sach can nhap: ";
+		cin >> sltensach;
+		
+		a[n].NhapCacSach();
+		n++;
+		if(!(a[n].tensach)){
+			cout << "===DANH SACH CAC SACH DA NHAP===\n";
+			cout << "Ten sach\tTac gia\tThe loai\tSo luong\n";
+			for(int i = 0; i < n - 1; i++)
+				a[i].InCacSachVuaNhap();
+		}
+		return 0;
+	}
+//	cout << "===DANH SACH CAC SACH DA NHAP===\n";
+	
+}
