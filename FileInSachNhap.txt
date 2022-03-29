@@ -9,3 +9,5 @@ a			a			a			1
 sach toan 1			bgddtvn			sgk			4
 4			4			4			4
 4			4						6
+toan 1			that			sgk			3
+tieng viet 5			khoi			sach giai			5
